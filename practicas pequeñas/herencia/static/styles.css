@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+a,
+li {
+    text-decoration: none;
+}
+nav {
+    background-color: antiquewhite;
+    width: 100%;
+    text-align: center;
+    padding-top: 12.5px;
+    height: 50px;
+}

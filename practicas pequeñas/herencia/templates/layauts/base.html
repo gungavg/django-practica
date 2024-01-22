@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{%static 'styles.css'%}" />
+        {% block styles %} {% endblock %}
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        {% comment %} el include sirve para tomar una plantilla ya creada y
+        ponerla en el espaciop que deseemos {% endcomment %} {% include
+        'layauts/partials/menu.html' %}
+        <h1>Herencia</h1>
+        <main>{% block content %} {% endblock %}</main>
+        {% block scripts %} {% endblock %}
+    </body>
+</html>

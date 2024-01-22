@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        {% comment %} de esta forma se ponen los enlaces, ya que esta es la foma
+        mas optima, hacer la llamada al nombre que le asignamos y ademas lo hace
+        mantenible. {% endcomment %}
+        <li><a href="{% url 'herencia' %}">Herencia</a></li>
+        <li><a href="{% url 'otra' %}">Otra</a></li>
+    </ul>
+</nav>
