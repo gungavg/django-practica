@@ -1,0 +1,102 @@
+/*? esta Parte es para poder cerar variables globales, para las letras o para los colores que deseemos */
+:root {
+    --color-primary: #ffe600;
+    --color-secondary: #f5f5f5;
+    --color-bg: #b3b3b3;
+    --color-title: #333333;
+    --color-text: #bfbfbf;
+    --color-text2: #5a646c;
+    --font-title: dream;
+    --font-text: luis;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-text);
+}
+/* prettier-ignore */
+h1,h2,h3,h4,h5 {
+    font-family: var(--font-title);
+}
+nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: var(--color-bg);
+}
+nav img {
+    margin: 25px;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+nav ul li {
+    padding: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-title);
+    font-size: 30px;
+    font-weight: 700px;
+    font-family: var(--font-title);
+}
+/* ! esta parte sirve para darle un efecto cuando estamos pasando por encima con el cursor */
+nav ul li a:hover {
+    color: white;
+}
+main {
+    background-color: var(--color-secondary);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+.about {
+    display: flex;
+    padding: 25px;
+}
+.about_content {
+    width: 400px;
+    padding: 50px;
+}
+.photos {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+footer {
+    width: 100vw;
+    height: 150px;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer ul {
+    list-style-type: none;
+}
+footer ul li {
+    color: var(--color-text2);
+}
+footer img {
+    margin: 25px;
+}
+/*? este sirve para poder importar fuentes  */
+@font-face {
+    font-family: dream;
+    src: url('../fonts/dream.otf');
+}
+@font-face {
+    font-family: luis;
+    src: url('../fonts/luis.ttf');
+}
