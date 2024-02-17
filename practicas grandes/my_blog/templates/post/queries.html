@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h3>Buisqueda limitada con offests</h3>
+        <ul>
+            {% for off in offsets %}
+            <li>{{off.email}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Obteniendo los 10 primeros</h3>
+        <ul>
+            {% for lim in limit %}
+            <li>{{lim.email}}</li>
+            {% endfor %}
+        </ul>
+        <h3>obteniendo un unico elemento</h3>
+        <p>{{ author }}</p>
+        <h3>buscando al autor cuyo id = 28</h3>
+        <ul>
+            {%for elm in filtered%}
+            <li>{{elm.name}}|{{elm.email}}</li>
+            {%endfor%}
+        </ul>
+
+        <h3>Todos los autores</h3>
+        <ul>
+            {% for author in authors %}
+            <li>{{author.name}}({{author.email}})</li>
+            {% endfor %}
+        </ul>
+        <h3>total de autores: {{authors|length}}</h3>
+    </body>
+</html>
