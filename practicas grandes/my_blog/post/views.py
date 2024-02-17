@@ -18,4 +18,14 @@ def queries(request):
     # obtener los 10 valores saltando los 5 primeros
     offsets = Author.objects.all()[5:10]
     
-    return render (request, 'post/queries.html', {'authors':authors,'filtered':filltered,'author':author,'limit':limit, 'offsets': offsets})
+    #! metodos de ordenacion lo que en sql es order by 
+    #? obtener todos los elementos que se tienen en un objeto ordenado 
+    orders=Author.objects.all().order_by('email')
+    
+    #? obtener todos los elementos cuyo id sea menor o igual a 15
+    filtered2=Author.objects.filter(id__lte=15)
+    
+    #? para filtrar por alguna palabra clave
+    filtered3= Author.objects.filter(name__contains="sim")
+    
+    return render (request, 'post/queries.html', {'authors':authors,'filtered':filltered,'author':author,'limit':limit, 'offsets': offsets,'orders':orders,'filtered2':filtered2,'filtered3':filtered3})

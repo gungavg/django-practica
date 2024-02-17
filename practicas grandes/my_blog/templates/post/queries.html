@@ -9,6 +9,24 @@
         <script src="main.js"></script>
     </head>
     <body>
+        <h3>Elementos filtrados por una palabra clave</h3>
+        <ul>
+            {% for fill in filtered3 %}
+            <li>{{fill.name}}|{{fill.email}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Elementos cuyo id es menor o igual a 15</h3>
+        <ul>
+            {% for fill in filtered2 %}
+            <li>{{fill.name}}|{{fill.email}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Elementos ordenados por email</h3>
+        <ul>
+            {% for order in orders %}
+            <li>{{order.email}}</li>
+            {% endfor %}
+        </ul>
         <h3>Buisqueda limitada con offests</h3>
         <ul>
             {% for off in offsets %}
