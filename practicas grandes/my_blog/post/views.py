@@ -1,7 +1,14 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 from .models import Author, Entry
-# Create your views here.
+
+def update(request):
+    author =Author.objects.get(id=1)
+    author.name="jose perez"
+    author.email="joseperez@gmail.com"
+    author.save()
+    return HttpResponse("Se modifico correctamente")
+
 def queries(request):
     # obtener todos los elementos que se tienen en un objeto
     authors=Author.objects.all()
