@@ -5,7 +5,6 @@ class Product(models.Model):
     short_description= models.CharField( max_length=50,blank=False, null=False)
     description = models.TextField(blank=False, null=False)
     stock= models.IntegerField(default=20)
-    img = models.FileField(upload_to=None, max_length=100)
     
     def __str__(self):
         return self.name
